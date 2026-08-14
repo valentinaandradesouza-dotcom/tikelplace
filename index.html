@@ -1,94 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinekl's Blog</title>
-    <style>
-        header {
-            background-color: hsl(125, 22%, 43%);
-            color: #FFFFFF;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-
-        main {
-            background-color: #FFFFFF;
-            color: #04f921;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-        article{
-            display: flex;
-        }
-
-        img {
-            width: 80px;
-            height: 80px;
-        }
-
-        .artigo-autor {
-            font-weight: bold;
-        }
-    </style>
-</head>
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tikelplace | PHIGHTING! Corner</title>
+<meta name="description" content="Tikelplace — a personal fan corner for PHIGHTING!, art, characters and blog posts.">
+<style>
+:root{--ink:#17202a;--paper:#fffdf7;--green:#315b4b;--dark:#203d33;--mint:#dcefe6;--gold:#f0c96b;--shadow:0 10px 25px rgba(23,32,42,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#eaf5ef,#fff8ed 55%,#f7e7ec);line-height:1.6}
+header{background:var(--dark);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10;box-shadow:0 3px 12px rgba(0,0,0,.18)}nav{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;letter-spacing:.5px}nav a{color:#fff;text-decoration:none;margin-left:16px;font-weight:700}nav a:hover{color:var(--gold)}
+main{max-width:1050px;margin:auto;padding:28px 18px 60px}.hero{min-height:420px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:45px;border-radius:28px;background:var(--paper);box-shadow:var(--shadow);border:3px solid var(--green)}.eyebrow{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:2px}h1{font-size:clamp(2.4rem,7vw,5rem);line-height:.95;margin:8px 0 18px}h2{color:var(--dark)}.hero p{font-size:1.1rem}.hero-art{text-align:center}.hero-art img{max-width:100%;width:270px;max-height:300px;object-fit:contain;filter:drop-shadow(0 12px 10px rgba(0,0,0,.16))}.button{display:inline-block;margin-top:12px;padding:11px 17px;border-radius:999px;background:var(--green);color:#fff;text-decoration:none;font-weight:800}.button:hover{background:var(--dark)}
+section{margin-top:38px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--paper);padding:22px;border-radius:20px;box-shadow:var(--shadow);border-top:6px solid var(--green)}.tag{display:inline-block;padding:4px 9px;border-radius:999px;background:var(--mint);color:var(--dark);font-size:.8rem;font-weight:800}.class-list{display:flex;flex-wrap:wrap;gap:10px}.class-list span{background:#fff;border:2px solid var(--green);border-radius:999px;padding:7px 12px;font-weight:800}footer{text-align:center;padding:28px 18px;background:var(--dark);color:#fff}footer a{color:var(--gold)}
+@media(max-width:760px){nav{flex-direction:column}nav a{margin:0 7px}.hero{grid-template-columns:1fr;padding:28px;text-align:center}.cards{grid-template-columns:1fr}}
+</style></head>
 <body>
-    <header>
-        <h1>Meu blog tech</h1>
-        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
-    </header>
-    <main>
-        <article>
-            <img src="Shuriken from PHIGHTING ICON!!.jpeg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-            <div>
-                <h2>Meu primeiro post</h2>
-                <p class="artigo-autor">Por: Marcelo Paludetto</p>
-                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
-                    tecnologia.</p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
-        <article>
-            <img src="imagem-blog.png"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-            <div>
-                <h2>Meu segundo post</h2>
-                <p class="artigo-autor">Por: Marcelo Paludetto</p>
-                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
-                    tecnologia.</p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
-    </main>
-</body>
-<script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach(function (botao) {
-        let curtiu = false;
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            if (curtiu === false){
-                texto.textContent++;
-                curtiu = true;
-            } else{
-                texto.textContent--;
-                curtiu = false;
-            }
-        }
-    })
-
-
-</script>
-
-</html>
+<header><nav><div class="logo">✦ TIKELPLACE</div><div><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="#phighting">PHIGHTING!</a><a href="#about">About</a></div></nav></header>
+<main>
+<section class="hero" id="home"><div><div class="eyebrow">Welcome to Tikelplace</div><h1>Enter the PHIGHT.</h1><p>A personal corner for PHIGHTING!, character ideas, artwork, discoveries and blog posts.</p><a class="button" href="blog.html">Read the blog →</a></div><div class="hero-art"><img src="Shuriken from PHIGHTING ICON!!.jpeg" alt="Shuriken from PHIGHTING!"><p><strong>Featured:</strong> Shuriken</p></div></section>
+<section id="phighting"><div class="eyebrow">The universe</div><h2>PHIGHTING! at a glance</h2><div class="cards"><article class="card"><span class="tag">MELEE</span><h3>Sword & friends</h3><p>Close-range Phighters built around mobility, melee attacks and getting into the action.</p></article><article class="card"><span class="tag">RANGED</span><h3>Rocket • Shuriken</h3><p>Ranged Phighters who pressure opponents from a distance.</p></article><article class="card"><span class="tag">SUPPORT</span><h3>Medkit • Boombox</h3><p>Support Phighters who help shape their team's fights with utility.</p></article></div><p>The PHIGHTING! Wiki organizes playable Phighters into Melee, Ranged and Support classes. This fan homepage uses that idea for organization while keeping Tikelplace's design original.</p><div class="class-list"><span>Melee</span><span>Ranged</span><span>Support</span><span>Phighters</span><span>Lore</span><span>Dialogue</span></div></section>
+<section id="about"><div class="card"><div class="eyebrow">About this site</div><h2>My little corner of the internet</h2><p>This is Tikelplace — a personal site for sharing art, fandom thoughts, character notes and blog posts.</p><a class="button" href="blog.html">See all posts</a></div></section>
+</main><footer><p>Made for Tikelplace ✦ Fan site, not an official PHIGHTING! website.</p><p><a href="https://phighting.wiki/" target="_blank" rel="noopener">Visit the PHIGHTING! Wiki</a></p></footer>
+</body></html>
